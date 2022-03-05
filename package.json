@@ -1,14 +1,13 @@
-
 {
   "name": "vuejourney",
   "version": "1.0.0",
   "description": "down the vue",
   "main": "index.js",
   "scripts": {
-   
-    "start": "npm run serve",
-
-    "serve": "live-server --open=/src/app.html --ignore=.git,node_modules",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "postinstall": "npm run build",
+    "start": "node server.js",
     "sass": "node-sass -i -w --output-style=compressed src/styles/style.scss src/styles/style.min.css",
     "lint": "node-sass -i --output-style=compressed src/styles/style.scss src/styles/style.min.css && npm run sasslint",
     "sasslint": "sass-lint -c .sass-lint.yml -v -f table"
@@ -32,6 +31,9 @@
   },
   "homepage": "https://github.com/ShawnWhy/VueJourney#readme",
   "dependencies": {
-    "jquery": "^3.6.0"
+    "express": "^4.17.3",
+    "jquery": "^3.6.0",
+    "path": "^0.12.7",
+    "serve-static": "^1.14.2"
   }
 }
