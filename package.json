@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "down the vue",
   "main": "index.js",
+  "engines":{
+
+    "node":"8.2.0"
+    },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
