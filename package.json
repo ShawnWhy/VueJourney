@@ -1,43 +1,48 @@
 {
-  "name": "vuejourney",
-  "version": "1.0.0",
-  "description": "down the vue",
-  "main": "index.js",
-  "engines":{
-
-    "node":"8.2.0"
-    },
+  "name": "vuejourneyvue",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "postinstall": "npm run build",
-    "start": "node server.js",
-    "sass": "node-sass -i -w --output-style=compressed src/styles/style.scss src/styles/style.min.css",
-    "lint": "node-sass -i --output-style=compressed src/styles/style.scss src/styles/style.min.css && npm run sasslint",
-    "sasslint": "sass-lint -c .sass-lint.yml -v -f table"
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3"
   },
   "devDependencies": {
-    "concurrently": "^7.0.0",
-    "live-server": "^1.1.0",
-    "node-sass": "^7.0.1",
-    "normalize.css": "^8.0.1",
-    "sass-lint": "^1.13.1",
-    "tjw-sasslint-rules": "^2.1.0"
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^8.0.3"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ShawnWhy/VueJourney.git"
+  "eslintConfig": {
+    "root": false,
+    "env": {
+      "node": false
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "@vue/standard"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
   },
-  "author": "Shawn Yu",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ShawnWhy/VueJourney/issues"
-  },
-  "homepage": "https://github.com/ShawnWhy/VueJourney#readme",
-  "dependencies": {
-    "express": "^4.17.3",
-    "jquery": "^3.6.0",
-    "path": "^0.12.7",
-    "serve-static": "^1.14.2"
-  }
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
 }
